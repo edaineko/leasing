@@ -1,0 +1,509 @@
+/*new_page*/
+body{
+	font-family: Tahoma, sans-serif;
+}
+img{
+	max-width: 100%;
+}
+#content{
+	max-width: 1024px;
+	margin: auto;
+}
+/*----------------------b-leasing-banner------------------------------------*/
+.b-leasing-banner{
+	display: flex;
+	flex-direction: row;
+	height: 270px;
+	background-color: rgb(241, 241, 241);
+	margin-top: 24px;
+}
+.b-leasing-banner__img{
+	width: 240px;
+}
+.b-leasing-banner h2{
+	font-size: 40px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.1;
+	margin: 0;
+}
+.b-calc-leasing__title{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.b-leasing-banner__text{
+	display: flex;
+	flex-direction: column;
+	background:url("images/leasing/banner_leasing.png") no-repeat;
+	flex-basis: 80%;
+	padding-left: 46px;
+	justify-content: space-evenly;
+}
+.b-leasing-banner__about {
+	display: flex;
+	align-items: center;
+	flex-basis: 49%;
+	font-size: 22px;
+	color: rgb(102, 102, 102);
+	text-align: left;
+	-moz-transform: matrix( 0.99838709677419,0,0,1.00003746074306,0,0);
+	-webkit-transform: matrix( 0.99838709677419,0,0,1.00003746074306,0,0);
+	-ms-transform: matrix( 0.99838709677419,0,0,1.00003746074306,0,0);
+	justify-content: center;
+	list-style: none;
+	max-width: 322px;
+	flex-direction: column;
+	padding: 0;
+}
+.b-leasing-banner__about p{
+	display: inline-block;
+	position: relative;
+	margin: 0;
+}
+.b-leasing-banner__about img {
+	position: absolute;
+	left: -48px;
+}
+.b-banner__img-dogovor{
+	top:43px;
+}
+.b-banner__img-insurance{
+	bottom: 38px;
+}
+.b-banner__img-time{
+	left: -48px;
+}
+div#content .b-leasing-banner__about p{
+	line-height: 1.182;
+	padding: 12px 0;
+}
+.b-leasing-banner__about span{
+	font-weight: bold;
+}
+div#content * h3 {
+	font-size: 26px;
+	color: #e52530;
+	font-weight: bold;
+	line-height: 1.154;
+	text-align: left;
+	margin: 0 0 22px 0;
+}
+/*----------------------b-calc-leasing------------------------------------*/
+.b-calc-leasing{
+	margin: 60px auto;
+}
+.b-calc-leasing__desc{
+	max-width: 491px;
+}
+.b-calc-leasing__table h5{
+	background-color: rgb(241, 241, 241);
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: left;
+	padding: 5px 0;
+}
+.b-calc-leasing__image{
+	background-color: rgb(229, 37, 48);
+	width: 89px;
+	height: 89px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.b-calc-leasing-title{
+	display: flex;
+}
+.b-calc-leasing__text{
+	margin-left: 16px;
+}
+.b-calc-submit{
+	display: inline-block;
+}
+.b-calc-leasing .b-calc-submit__link {
+	background-color: rgb(229, 37, 48);
+	font-size: 18px;
+	color: #fff;
+	padding: 17px 60px;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+}
+.b-warning{
+	display: flex;
+}
+.b-warning__icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+	flex-basis: 51px;
+}
+.b-warning p{
+	font-size: 14px;
+	color: rgb(153, 153, 153);
+	line-height: 1.286;
+	width: 533px;
+	margin: 0;
+}
+.b-calc-leasing__flex-container{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+.b-calc-leasing__table-sum{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 18px;
+	color: rgb(51, 51, 51);
+	line-height: 1.333;
+	background-color: rgb(241, 241, 241);
+	padding: 18px 0;
+	margin: 30px 0;
+}
+
+.b-calc-leasing__table-sum div{
+	display: flex;
+	flex-direction: column;
+}
+.b-calc-leasing__table-sum span{
+	font-size: 36px;
+	color: rgb(102, 102, 102);
+}
+.table-sum__line {
+	background-color: rgb(204, 204, 204);
+	width: 1px;
+	height: 74px;
+}
+.b-calc-leasing h5{
+	padding: 5px 0 5px 60px;
+	position: relative;
+	margin: 0 0 26px 0;
+}
+.b-calc-leasing__timetable{
+	position: relative;
+}
+.show-b-calc-leasing__timetable {
+	position: absolute;
+	top: 5px;
+	right: 70px;
+	font-size: 14px;
+	color: rgb(102, 102, 102);
+	line-height: 1.714;
+	cursor: pointer;
+}
+.show-b-calc-leasing__timetable:after {
+	content:  "";
+	background: url("images/leasing/arrow_down.png");
+	right: -15px;
+	position: absolute;
+	width: 10px;
+	height: 6px;
+	top: 10px;
+}
+.b-calc-leasing__flex-container{
+	display: flex;
+}
+.b-calc-timetable__flex-container{
+	display: flex;
+}
+.b-calc-timetable__number{
+	flex-basis: 25%;
+}
+.b-calc-timetable__sum{
+	flex: 1;
+}
+.b-calc-timetable__number p,
+.b-calc-timetable__sum p{
+	padding: 5px 70px 5px 60px;
+	margin: 0;
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+}
+.b-calc-timetable__number p:first-child,
+.b-calc-timetable__sum p:first-child{
+	font-size: 18px;
+	color: rgb(51, 51, 51);
+	line-height: 1.333;
+}
+.b-calc-timetable__number p:nth-child(even),
+.b-calc-timetable__sum p:nth-child(even){
+	background-color: rgb(241, 241, 241);
+}
+.b-calc-timetable__print {
+	padding: 25px 0 25px 60px;
+}
+.b-calc-timetable__info{
+	position: relative;
+}
+.b-calc-timetable__info * {
+	top: 20px;
+}
+.b-calc-timetable__print:before{
+	content:  "";
+	background: url("images/leasing/print_calc_time_table.png");
+	right: -15px;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	top: 26px;
+	left: 35px;
+}
+.b-calc-timetable__print a{
+	text-decoration: none;
+	font-size: 14px;
+	color: rgb(102, 102, 102);
+}
+/*----------------------b-condition-leasing------------------------------------*/
+.b-condition-leasing__text {
+	font-size: 16px;
+	color: rgb(31, 31, 31);
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+.b-condition-list__flex-container{
+	display: flex;
+	justify-content: space-around;
+	padding: 23px 0;
+}
+.b-condition-list__flex-container:not(:last-child){
+	border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.b-condition-list__program{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: rgb(241, 241, 241);
+	padding: 0 25px 15px;
+	height: 115px;
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+}
+.b-condition-list__program span{
+	font-size: 60px;
+	color: rgb(102, 102, 102);
+	line-height: 0.4;
+}
+.b-condition-list__item p:nth-child(odd){
+	background-color: rgb(241, 241, 241);
+}
+.b-condition-list__item p:first-child{
+	margin-top: 0;
+}
+.b-condition-list__item{
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	line-height: 1.875;
+}
+.b-condition-list__item span{
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	line-height: 1.875;
+}
+.trade-in__btn.order.popup-button{
+	display: flex;
+	align-items: center;
+	background-color: rgb(229, 37, 48);
+	font-size: 18px;
+	font-family: Verdana, sans-serif;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+	padding: 20px 15px;
+}
+/*----------------------b-condition-leasing------------------------------------*/
+.b-partners-leasing{
+	margin: 30px auto;
+}
+.b-partners-leasing__text{
+	font-size: 16px;
+	color: rgb(31, 31, 31);
+	line-height: 1.5;
+}
+.b-partners-leasing__flex-container{
+	display: flex;
+	justify-content: flex-start;
+}
+.b-partners-leasing__list{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.b-partners-leasing__list li{
+	padding: 7px 30px;
+}
+.b-partners-leasing__list:not(:first-child):after{
+	position: absolute;
+	content:" ";
+	background: rgb(204, 204, 204);
+	width: 1px;
+	height: 131px;
+	display: block;
+}
+/*----------------------b-partners-leasing------------------------------------*/
+.b-how-leasing{
+	margin: 30px auto;
+}
+.b-how-leasing___flex-container{
+	list-style: none;
+	display: flex;
+	padding: 0;
+}
+.b-how-leasing__nubmer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-width: 2px;
+	border-color: rgb(210, 53, 62);
+	border-style: solid;
+	border-radius: 50%;
+	width: 53px;
+	height: 53px;
+	font-size: 26px;
+	color: rgb(229, 37, 48);
+	font-weight: bold;
+	line-height: 1.154;
+}
+.b-how-leasing__list{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+ul.b-how-leasing__list {
+	padding: 0;
+}
+.b-how-leasing__list li{
+	width: 30%;
+}
+.b-how-leasing__number-line{
+	border-width: 2px;
+	border-color: rgb(210, 53, 62);
+	border-style: dotted;
+	width: 173px;
+	height: 1px;
+}
+.b-how-leasing__text{
+	font-size: 16px;
+	padding: 16px 0;
+	color: rgb(102, 102, 102);
+}
+.b-how-leasing_tel{
+	font-size: 18px;
+	color: rgb(102, 102, 102);
+	text-decoration: none;
+}
+
+.b-how-leasing__text span{
+	font-size: 18px;
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	line-height: 1.333;
+}
+.b-how-leasing__list-documents{
+	background: rgb(241, 241, 241);
+	border-width: 1px;
+	border-color: rgb(204, 204, 204);
+	border-style: solid;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px;
+}
+.b-list-documents{
+	padding: 0;
+	margin: 0;
+}
+.b-list-documents ul li:before {
+	content:  "—";
+	position: relative;
+	left:-5px;
+	display: block;
+}
+.b-how-leasing__list-documents ul li{
+	list-style: none;
+	padding-left: 20px;
+}
+.b-how-leasing__list-documents ul li:nth-child(1){
+	padding: 0;
+}
+.b-how-leasing__list-documents ul li:first-child{
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	line-height: 1.5;
+}
+.b-how-leasing__list-documents ul li a:hover{
+	color: #cc3333;
+	cursor: pointer;
+}
+.b-list-documents span{
+	border-bottom: 2px solid rgb(102, 102, 102);
+}
+.b-how-leasing__doc{
+	position: relative;
+	padding-top: 18px;
+}
+.b-how-leasing__show-doc{
+	border-bottom: 2px dotted;
+	font-size: 16px;
+	color: rgb(229, 37, 48);
+}
+.b-how-leasing__show-doc:after {
+	content:  "";
+	background: url("images/leasing/arrow_how.png");
+	right: 129px;
+	position: absolute;
+	width: 10px;
+	height: 6px;
+	top: 28px;
+}
+.b-list-documents a{
+	color: rgb(102, 102, 102);
+	text-decoration: underline;
+}
+.b-list-documents li{
+	margin: 8px 0;
+}
+/*----------------------b-advantages-leasing------------------------------------*/
+.b-advantages-leasing{
+	margin: 30px auto;
+}
+.b-advantages-leasing__flex-container{
+	display: flex;
+	align-items: center;
+}
+.b-advantages-leasing__list{
+	color: rgb(102, 102, 102);
+	list-style: none;
+	padding-left: 90px;
+	font-size: 18px;
+	text-align: left;
+	max-width: 740px;
+	margin: 0;
+}
+.b-advantages-leasing__list li{
+	position: relative;
+	padding: 7px 0;
+}
+.b-advantages-leasing__list li:before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: red;
+	left: -27px;
+	top: 10px;
+}
+.b-advantages-leasing__list span{
+	font-size: 18px;
+	font-weight: bold;
+	color: rgb(102, 102, 102);
+}

@@ -266,7 +266,7 @@ div#content * h3 {
 }
 .b-condition-list__flex-container{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding: 23px 0;
 }
 .b-condition-list__flex-container:not(:last-child){
@@ -294,6 +294,9 @@ div#content * h3 {
 }
 .b-condition-list__item p:first-child{
 	margin-top: 0;
+}
+.b-condition-list__item p{
+	display: flex;
 }
 .b-condition-list__item{
 	font-size: 16px;
@@ -506,4 +509,9 @@ ul.b-how-leasing__list {
 	font-size: 18px;
 	font-weight: bold;
 	color: rgb(102, 102, 102);
+}
+.flex {
+	display: flex;
+	width: 570px;
+	max-width: 100%;
 }

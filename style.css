@@ -36,9 +36,11 @@ img{
 	display: flex;
 	flex-direction: column;
 	background:url("images/leasing/banner_leasing.png") no-repeat;
-	flex-basis: 80%;
+	flex-basis: 60%;
 	padding-left: 46px;
 	justify-content: space-evenly;
+	background-size: 85% 100%;
+
 }
 .b-leasing-banner__about {
 	display: flex;
@@ -181,7 +183,7 @@ div#content * h3 {
 .b-calc-leasing h5{
 	padding: 5px 0 5px 60px;
 	position: relative;
-	margin: 0 0 26px 0;
+	margin: 0 0 15px 0;
 }
 .b-calc-leasing__timetable{
 	position: relative;
@@ -228,6 +230,7 @@ div#content * h3 {
 	font-size: 18px;
 	color: rgb(51, 51, 51);
 	line-height: 1.333;
+	padding:5px 70px 20px 60px;
 }
 .b-calc-timetable__number p:nth-child(even),
 .b-calc-timetable__sum p:nth-child(even){
@@ -272,7 +275,12 @@ div#content * h3 {
 .b-condition-list__flex-container:not(:last-child){
 	border-bottom: 1px solid rgb(232, 232, 232);
 }
-
+.b-condition-list__item__flex-container{
+	display: flex;
+	justify-content: center;
+	width: 570px;
+	max-width: 100%;
+}
 .b-condition-list__program{
 	display: flex;
 	flex-direction: column;
@@ -297,15 +305,11 @@ div#content * h3 {
 }
 .b-condition-list__item p{
 	display: flex;
+	overflow: hidden;
 }
 .b-condition-list__item{
 	font-size: 16px;
 	color: rgb(102, 102, 102);
-	line-height: 1.875;
-}
-.b-condition-list__item span{
-	color: rgb(102, 102, 102);
-	font-weight: bold;
 	line-height: 1.875;
 }
 .trade-in__btn.order.popup-button{
@@ -320,6 +324,16 @@ div#content * h3 {
 	text-decoration: none;
 	padding: 20px 15px;
 }
+.b-condition-list__text{
+	flex-basis: 45%;
+	color: rgb(102, 102, 102);
+	font-weight: bold;
+	line-height: 1.875;
+	padding-left: 5px;
+}
+.b-condition-list__number{
+	flex: 1;
+}
 /*----------------------b-condition-leasing------------------------------------*/
 .b-partners-leasing{
 	margin: 30px auto;
@@ -332,16 +346,18 @@ div#content * h3 {
 .b-partners-leasing__flex-container{
 	display: flex;
 	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
 }
 .b-partners-leasing__list{
 	list-style: none;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	flex-basis: 250px;
 }
 .b-partners-leasing__list li{
-	padding: 7px 30px;
+	padding: 7px 0 0 30px;
 }
 .b-partners-leasing__list:not(:first-child):after{
 	position: absolute;
@@ -352,6 +368,9 @@ div#content * h3 {
 	display: block;
 }
 /*----------------------b-partners-leasing------------------------------------*/
+.b-partners-leasing__mob{
+	display: none;
+}
 .b-how-leasing{
 	margin: 30px auto;
 }
@@ -374,6 +393,17 @@ div#content * h3 {
 	color: rgb(229, 37, 48);
 	font-weight: bold;
 	line-height: 1.154;
+	position: relative;
+}
+.b-how-leasing__nubmer:after {
+	position: absolute;
+	top:50%;
+	left:120%;
+	content:"";
+	display: block;
+	border-bottom: 2px dotted rgb(210, 53, 62);
+	width: 170px;
+	height: 0;
 }
 .b-how-leasing__list{
 	list-style: none;
@@ -391,13 +421,14 @@ ul.b-how-leasing__list {
 	border-width: 2px;
 	border-color: rgb(210, 53, 62);
 	border-style: dotted;
-	width: 173px;
+	width: 179px;
 	height: 1px;
 }
 .b-how-leasing__text{
 	font-size: 16px;
 	padding: 16px 0;
 	color: rgb(102, 102, 102);
+	max-width: 240px;
 }
 .b-how-leasing_tel{
 	font-size: 18px;
@@ -419,6 +450,17 @@ ul.b-how-leasing__list {
 	display: flex;
 	justify-content: space-between;
 	padding: 30px;
+	position: relative;
+	margin-top: 37px;
+}
+.b-how-leasing__list-documents:before{
+	content: "";
+	background: url(images/leasing/corner.png) no-repeat;
+	left: -1px;
+	position: absolute;
+	width: 60px;
+	height: 37px;
+	top: -35px;
 }
 .b-list-documents{
 	padding: 0;
@@ -458,15 +500,16 @@ ul.b-how-leasing__list {
 	border-bottom: 2px dotted;
 	font-size: 16px;
 	color: rgb(229, 37, 48);
+	position: relative;
 }
 .b-how-leasing__show-doc:after {
 	content:  "";
 	background: url("images/leasing/arrow_how.png");
-	right: 129px;
+	right: -16px;
 	position: absolute;
 	width: 10px;
 	height: 6px;
-	top: 28px;
+	top: 8px;
 }
 .b-list-documents a{
 	color: rgb(102, 102, 102);
@@ -475,6 +518,7 @@ ul.b-how-leasing__list {
 .b-list-documents li{
 	margin: 8px 0;
 }
+
 /*----------------------b-advantages-leasing------------------------------------*/
 .b-advantages-leasing{
 	margin: 30px auto;
@@ -515,3 +559,363 @@ ul.b-how-leasing__list {
 	width: 570px;
 	max-width: 100%;
 }
+#owl-carousel-partner .glyphicon-right{
+	position: absolute;
+	top:40px;
+	right:23px;
+}
+#owl-carousel-partner .owl-dots .owl-dot{
+	border-width: 1px;
+	border-color: rgb(225, 31, 58);
+	border-style: solid;
+	width: 10px;
+	height: 9px;
+	margin-right: 5px;
+}
+#owl-carousel-partner .owl-dots .owl-dot span{
+	display: none;
+}
+#owl-carousel-partner.owl-theme .owl-dots{
+	text-align: left;
+}
+#owl-carousel-partner .owl-dots .owl-dot.active{
+	width: 11px;
+	height:11px;
+	background: rgb(225, 31, 58);
+}
+
+.calculator input {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(204, 204, 204);
+	background-color: rgb(255, 255, 255);
+	width: 158px;
+	height: 53px;
+	text-transform: none!important;
+	box-shadow: none;
+	outline: none;
+	font-size: 24px;
+	color: rgb(102, 102, 102);
+	line-height: 1;
+	text-align: left;
+	margin: 5px 0;
+}
+.form-control:focus {
+	box-shadow: none;
+	border-color: rgb(204, 204, 204);
+}
+.calculator{
+	margin: 20px 0;
+}
+.calculator .noUi-connect,.calculator .noUi-origin{
+	position: relative;
+}
+
+.calculator .noUi-horizontal {
+	height: 1px;
+}
+.calculator .noUi-connect {
+	background: #9999;
+}
+
+
+.calculator label{
+	font-size: 16px;
+	color: rgb(51, 51, 51);
+	line-height: 1.5;
+	text-align: left;
+}
+.calculator .ui-slider-horizontal{
+	height: 1px;
+	background: none;
+}
+.calculator .ui-state-default, .calculator .ui-widget-content .ui-state-default, .calculator .ui-widget-header .ui-state-default,
+.calculator .ui-button, html .calculator .ui-button.ui-state-disabled:hover, html .calculator .ui-button.ui-state-disabled:active{
+	border-width: 3px;
+	border-color: rgb(229, 37, 48);
+	border-style: solid;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 2px 2.88px 0.12px rgba(0, 0, 0, 0.2);
+	width: 11px;
+	height: 11px;
+	outline: none;
+}
+.calculator .ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min{
+	background:rgb(229, 37, 48);
+	height: 3px;
+}
+.calculator .ui-widget.ui-widget-content{
+	border: none;
+	background-color: rgb(204, 204, 204);
+	height: 3px;
+	flex:1;
+}
+.calculator .ui-slider-horizontal .ui-slider-handle{
+	top: -0.5em;
+}
+.calculator_row{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.calc-right{
+	display: flex;
+	flex-direction: column;
+	width:74%;
+}
+.calc-horiz{
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.calc-horiz span{
+	font-size: 16px;
+	color: rgb(102, 102, 102);
+	line-height: 1.5;
+
+}
+@media (max-width: 1023px) {
+	.b-leasing-banner h2{
+		font-size: 28px;
+	}
+	.b-leasing-banner__about{
+		font-size: 20px;
+		max-width: 236px;
+	}
+	.b-partners-leasing__list{
+		flex-basis: 187px;
+	}
+	.b-calc-timetable__number{
+		flex-basis: 32%;
+	}
+	.b-condition-list__item__flex-container{
+		width: auto;
+	}
+	.b-condition-list__program {
+		flex-direction: row;
+		height: 65px;
+		font-size: 24px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+		margin: 0 15px;
+		/*max-width:515px;*/
+	}
+	.b-condition-list__item{
+		font-size: 12px;
+		margin-top: 15px;
+	}
+	.b-condition-list__item p{
+		height: 2em;
+		line-height: 2em;
+		padding: 0em 5px;
+	}
+	.b-condition-list__flex-container{
+		flex-direction: column;
+	}
+	.b-condition-list__number,
+	.b-condition-list__text{
+		flex-basis: 50%;
+	}
+
+}
+@media (max-width: 767px) {
+
+	.b-leasing-banner{
+		flex-direction: column;
+		height: 368px;
+	}
+	.b-leasing-banner h2{
+		font-size: 24px;
+		line-height: 1.25;
+	}
+	.b-leasing-banner__text{
+		min-height: 170px;
+		padding-left: 35px;
+	}
+	.b-leasing-banner__about{
+		font-size: 16px;
+		flex-basis: unset;
+		align-items: start;
+		padding-left: 70px;
+		min-height:190px;
+		max-width: 225px;
+	}
+	.b-leasing-banner__about img {
+		left: 12px;
+	}
+	.b-banner__img-dogovor{
+		top:23px;
+	}
+	.b-banner__img-insurance {
+		bottom: 24px;
+	}
+	div#content .b-leasing-banner__about p{
+		padding: 8px 0;
+	}
+	.b-warning{
+		max-width: 100%;
+		margin-top: 20px;
+	}
+	.b-warning__icon{
+		flex-basis: 21px;
+		align-items: start;
+	}
+	.b-calc-leasing .b-calc-submit__link{
+		/*min-width: 285px;*/
+	}
+	.b-calc-leasing__desc{
+		font-size: 12px;
+	}
+	.b-calc-leasing__flex-container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.b-calc-leasing__table-sum{
+		flex-direction: column;
+	}
+	.calc-right{
+		width:100%;
+	}
+	.table-sum__line{
+		width: 70px;
+		height: 1px;
+	}
+	.b-calc-leasing__table-sum div{
+		padding: 15px 0;
+		text-align: center;
+	}
+	.b-calc-leasing h5{
+		margin-bottom: 5px;
+		padding-left: 5px;
+	}
+	.b-calc-timetable__flex-container p{
+		height: 2em;
+		line-height: 2em;
+		padding-left: 5px;
+	}
+	.b-calc-timetable__number p, .b-calc-timetable__sum p{
+		padding: 0;
+	}
+	.b-calc-timetable__number p:first-child, .b-calc-timetable__sum p:first-child{
+		padding: 10px 0;
+	}
+	.b-calc-timetable__number{
+		flex-basis: 40%;
+	}
+	.b-calc-leasing__image{
+		width:150px;
+		height: 74px;
+	}
+	.calculator input{
+		font-size: 18px;
+	}
+	.b-condition-list__program {
+		flex-direction: row;
+		height: 65px;
+		font-size: 24px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+		margin: 0 15px;
+	}
+	.b-condition-list__item{
+		font-size: 12px;
+		margin-top: 15px;
+	}
+	.b-condition-list__flex-container{
+		flex-direction: column;
+	}
+	.b-condition-list__number,
+	.b-condition-list__text{
+		flex-basis: 50%;
+	}
+	.b-how-leasing__list {
+		flex-direction: column;
+	}
+	.b-how-leasing__list li {
+		width: 100%;
+	}
+	.b-how-leasing__list-documents{
+		flex-direction: column;
+	}
+	.b-how-leasing__list-documents:before{
+		content: none;
+		margin-top: 20px;
+	}
+	.b-partners-leasing__text{
+		font-size: 12px;
+	}
+	.b-partners-leasing__list li{
+		padding-left: 0;
+	}
+	.b-partners-leasing__desctop{
+		display: none;
+	}
+	.b-partners-leasing__mob{
+		display: block;
+	}
+	.b-partners-leasing__list:not(:first-child):after {
+		content: none;
+	}
+	.b-how-leasing__text{
+		max-width: 70%;
+	}
+	.b-how-leasing__nubmer:after{
+		width: 220px;
+	}
+	.b-advantages-leasing__list,
+	.b-advantages-leasing__list span{
+		font-size: 12px;
+	}
+	.b-advantages-leasing__list{
+		padding: 0 15px 0 40px;
+	}
+	.b-advantages-leasing__flex-container{
+		flex-direction: column;
+		padding: 10px 0;
+	}
+	div#content .b-advantages-leasing h3{
+		margin-left: 60px;
+	}
+	.b-advantages-leasing{
+		position: absolute;
+	}
+	.b-advantages-leasing__image{
+		position: absolute;
+		top:0;
+		left: 0;
+		max-width: 50px;
+	}
+
+	div#content * h3{
+		font-size: 18px;
+	}
+
+	.calculator_row{
+		flex-direction: column;
+	}
+	.leasing_form_left > div{
+		display: inline-block;
+		width: 114px;
+	}
+	.calculator input{
+		padding-left: 10px;
+		width:100px;
+	}
+}
+@media  (max-width: 500px) {
+	.b-leasing-banner__text{
+		background:url("images/leasing/bg_banner_leasing_mob.png") no-repeat;
+		background-size: 100% 100%;
+		flex-basis: unset;
+	}
+	.b-condition-list__item p {
+		height: 3em;
+		line-height: 1em;
+		padding: 1em 0 0 5px;
+	}
+}
+
+

@@ -3,7 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
+	<link href="lib/owl.carousel.css" rel="stylesheet" type="text/css">
+	<link href="lib/owl.theme.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="https://dev.abamet.ru/bitrix/templates/Abamet_center/js/owl.carousel.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <div id="content">
@@ -31,7 +40,96 @@
 		</div>
 		<div class="b-calc-leasing__table">
 				<h5>Расчет ежемесячного платежа</h5>
-				<div class="b-calc-leasing__flex-container">
+			<div class="calculator">
+				<form>
+					<div class="calc-row">
+						<div class="cf calculator_row">
+							<div class="leasing_form_left">
+								<div>
+									<label for="calculator_price_input">Стоимость оборудования</label>
+								</div>
+								<input type="text" name="price" class="styler calculator_input_width" id="calculator_price_input"> <span class="input_append roubl">₽</span>
+							</div>
+							<div class="calc-right">
+								<div class="calc-horiz">
+									<span>250 тыс</span>
+									<span>1 млн</span>
+									<span>2 млн</span>
+									<span>3 млн</span>
+									<span>4 млн</span>
+									<span>5 млн</span>
+									<span>6 млн</span>
+								</div>
+								<div id="slider"></div>
+							</div>
+						</div>
+						<div class="cf calculator_row">
+							<div class="leasing_form_left">
+								<div>
+									<label for="calculator_month_input">Срок лизинга</label>
+								</div>
+								<input type="text" name="price" class="styler calculator_input_width" id="calculator_month_input"> <span class="input_append roubl">мес</span>
+							</div>
+							<div class="calc-right">
+								<div class="calc-horiz">
+									<span>12 мес</span>
+									<span>24 мес</span>
+									<span>36 мес</span>
+									<span>48 мес</span>
+									<span>60 мес</span>
+								</div>
+								<div id="slider-month"></div>
+							</div>
+						</div>
+						<div class="cf calculator_row">
+							<div class="leasing_form_left">
+								<div>
+									<label for="calculator_proc_input">Аванс</label>
+								</div>
+								<input type="text" name="price" class="styler calculator_input_width" id="calculator_proc_input"> <span class="input_append roubl">₽</span>
+							</div>
+							<div class="calc-right">
+								<div class="calc-horiz">
+									<span>20%</span>
+									<span>30%</span>
+									<span>40%</span>
+									<span>50%</span>
+									<span>60%</span>
+									<span>70%</span>
+									<span>80%</span>
+								</div>
+								<div id="slider-proc"></div>
+							</div>
+						</div>
+						<div class="cf calculator_row">
+							<div class="leasing_form_left">
+								<div>
+									<label for="calculator_vykup_input">Выкуп</label>
+								</div>
+								<input type="text" name="price" class="styler calculator_input_width" id="calculator_vykup_input"> <span class="input_append roubl">₽</span>
+							</div>
+							<div class="calc-right">
+								<div class="calc-horiz">
+									<span>0%</span>
+									<span>1%</span>
+									<span>2%</span>
+									<span>3%</span>
+									<span>4%</span>
+									<span>5%</span>
+									<span>6%</span>
+									<span>7%</span>
+									<span>8%</span>
+									<span>9%</span>
+									<span>10%</span>
+								</div>
+								<div id="slider-vykup"></div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="b-calc-leasing__flex-container">
 					<div class="b-calc-submit">
 						<a class="b-calc-submit__link" href="#" >Рассчитать</a>
 					</div>
@@ -106,16 +204,33 @@
 			<div class="b-condition-list__flex-container">
 				<div class="b-condition-list__program">Программа <span>01</span></div>
 				<div class="b-condition-list__item">
-					<p><span>Срок лизинга:</span>30%</p>
-					<p><span>Авансовый платеж:</span>от 13 до 36 месяцев</p>
-					<p><span>Годовое удорожание:</span>от 9,82 до 12,86 %</p>
-					<p><span>Сумма лизинга:</span>от 450 000 до 15 000 000 руб.</p>
-					<p><span>Срок ведения бизнеса:</span>от 12 месяцев</p>
-					<p><span>График платежей:</span>равномерный, ускоренный</p>
-					<p><span>Страхование:</span>включено</p>
-					<p><span>Валюта финансирования:</span>RUB</p>
-					<p><span>Досрочный выкуп:</span>возможен</p>
-					<p><span>Принятие решения:</span>от 3 до 10 дней</p>
+					<div class="b-condition-list__item__flex-container">
+						<div class="b-condition-list__text">
+							<p>Срок лизинга:</p>
+							<p>Авансовый платеж:</p>
+							<p>Годовое удорожание:</p>
+							<p>Сумма лизинга:</p>
+							<p>Срок ведения бизнеса:</p>
+							<p>График платежей:</p>
+							<p>Страхование:</p>
+							<p>Валюта финансирования:</p>
+							<p>Досрочный выкуп:</p>
+							<p>Принятие решения:</p>
+						</div>
+						<div class="b-condition-list__number">
+							<p>30%</p>
+							<p>от 13 до 36 месяцев</p>
+							<p>от 9,82 до 12,86 %</p>
+							<p>от 450 000 до 15 000 000 руб.</p>
+							<p>от 12 месяцев</p>
+							<p>равномерный, ускоренный</p>
+							<p>включено</p>
+							<p>RUB</p>
+							<p>возможен</p>
+							<p>от 3 до 10 дней</p>
+						</div>
+					</div>
+					<div>Узнать больше<span><img src="images/leasing/arrow_down.png"></span></div>
 					<div>Свернуть<span><img src="images/leasing/arrow_down.png"></span></div>
 				</div>
 				<div class="trade-in__link">
@@ -124,38 +239,36 @@
 			</div>
 			<div class="b-condition-list__flex-container">
 				<div class="b-condition-list__program">Программа <span>02</span></div>
-				<div class="b-condition-list__item">
-					<div class="flex">
-						<div style="width: 100%">
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
-							<p>Срок лизинга:</p>
+					<div class="b-condition-list__item">
+						<div class="b-condition-list__item__flex-container">
+							<div class="b-condition-list__text">
+								<p>Срок лизинга:</p>
+								<p>Авансовый платеж:</p>
+								<p>Годовое удорожание:</p>
+								<p>Сумма лизинга:</p>
+								<p>Срок ведения бизнеса:</p>
+								<p>График платежей:</p>
+								<p>Страхование:</p>
+								<p>Валюта финансирования:</p>
+								<p>Досрочный выкуп:</p>
+								<p>Принятие решения:</p>
+							</div>
+							<div class="b-condition-list__number">
+								<p>30%</p>
+								<p>от 13 до 36 месяцев</p>
+								<p>от 9,82 до 12,86 %</p>
+								<p>от 450 000 до 15 000 000 руб.</p>
+								<p>от 12 месяцев</p>
+								<p>равномерный, ускоренный</p>
+								<p>включено</p>
+								<p>RUB</p>
+								<p>возможен</p>
+								<p>от 3 до 10 дней</p>
+							</div>
 						</div>
-						<div>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-							<p>30%</p>
-						</div>
-				</div>
-					<p>Узнать больше<span><img src="images/leasing/arrow_down.png"></span></p>
-					<p>Свернуть<span><img src="images/leasing/arrow_down.png"></span></p>
-				</div>
+						<div>Узнать больше<span><img src="images/leasing/arrow_down.png"></span></div>
+						<div>Свернуть<span><img src="images/leasing/arrow_down.png"></span></div>
+					</div>
 				<div class="trade-in__link">
 					<a data-form="form3" class="trade-in__btn order popup-button" href="javascript:void(0);">Запросить  предложение</a>
 				</div>
@@ -163,18 +276,34 @@
 			<div class="b-condition-list__flex-container">
 				<div class="b-condition-list__program">Программа <span>03</span></div>
 				<div class="b-condition-list__item">
-					<p><span>Срок лизинга:</span>30%</p>
-					<p><span>Авансовый платеж:</span>от 13 до 36 месяцев</p>
-					<p><span>Годовое удорожание:</span>от 9,82 до 12,86 %</p>
-					<p>Узнать больше<span><img src="images/leasing/arrow_down.png" /></span></p>
-					<p><span>Сумма лизинга:</span>от 450 000 до 15 000 000 руб.</p>
-					<p><span>Срок ведения бизнеса:</span>от 12 месяцев</p>
-					<p><span>График платежей:</span>равномерный, ускоренный</p>
-					<p><span>Страхование:</span>включено</p>
-					<p><span>Валюта финансирования:</span>RUB</p>
-					<p><span>Досрочный выкуп:</span>возможен</p>
-					<p><span>Принятие решения:</span>от 3 до 10 дней</p>
-					<p>Свернуть<span><img src="images/leasing/arrow_down.png"></span></p>
+					<div class="b-condition-list__item__flex-container">
+						<div class="b-condition-list__text">
+							<p>Срок лизинга:</p>
+							<p>Авансовый платеж:</p>
+							<p>Годовое удорожание:</p>
+							<p>Сумма лизинга:</p>
+							<p>Срок ведения бизнеса:</p>
+							<p>График платежей:</p>
+							<p>Страхование:</p>
+							<p>Валюта финансирования:</p>
+							<p>Досрочный выкуп:</p>
+							<p>Принятие решения:</p>
+						</div>
+						<div class="b-condition-list__number">
+							<p>30%</p>
+							<p>от 13 до 36 месяцев</p>
+							<p>от 9,82 до 12,86 %</p>
+							<p>от 450 000 до 15 000 000 руб.</p>
+							<p>от 12 месяцев</p>
+							<p>равномерный, ускоренный</p>
+							<p>включено</p>
+							<p>RUB</p>
+							<p>возможен</p>
+							<p>от 3 до 10 дней</p>
+						</div>
+					</div>
+					<div>Узнать больше<span><img src="images/leasing/arrow_down.png"></span></div>
+					<div>Свернуть<span><img src="images/leasing/arrow_down.png"></span></div>
 				</div>
 				<div class="trade-in__link">
 					<a data-form="form3" class="trade-in__btn order popup-button" href="javascript:void(0);">Запросить  предложение</a>
@@ -185,37 +314,117 @@
 	</div>
 	<div class="b-partners-leasing">
 		<h3>Сотрудничаем с лизинговыми компаниями</h3>
-		<div class="b-partners-leasing__text">Мы собрали для вас лучшие предложения от лизинговых компаний Российской Федерации.<br>
-		                                      Сотрудничаем:
+		<div class="b-partners-leasing__text">
+			Мы собрали для вас лучшие предложения от лизинговых компаний Российской Федерации.<br>
+		    Сотрудничаем:
 		</div>
-		<div class="b-partners-leasing__flex-container">
-			<ul class="b-partners-leasing__list">
-				<li>- Brunswick Rail</li>
-				<li>- CARCADE Лизинг</li>
-				<li>- LeasePlan Russia</li>
-				<li>- Major Лизинг</li>
-			</ul>
-			<ul class="b-partners-leasing__list">
-				<li>- VAB Лизинг</li>
-				<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
-				<li>- Абсолют-Лизинг</li>
-				<li>- Авангард-Лизинг</li>
-			</ul>
-			<ul class="b-partners-leasing__list">
-				<li>- Brunswick Rail</li>
-				<li>- CARCADE Лизинг</li>
-				<li>- LeasePlan Russia</li>
-				<li>- Major Лизинг</li>
-			</ul>
-			<ul class="b-partners-leasing__list">
-				<li>- VAB Лизинг</li>
-				<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
-			</ul>
-	</div>
+		<div class="b-partners-leasing__desctop">
+			<div class="b-partners-leasing__flex-container">
+				<ul class="b-partners-leasing__list">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+					<li>- Абсолют-Лизинг</li>
+					<li>- Авангард-Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+			</div>
+			<div class="b-partners-leasing__flex-container">
+				<ul class="b-partners-leasing__list">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+					<li>- Абсолют-Лизинг</li>
+					<li>- Авангард-Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+				</ul>
+			</div>
+			<div>Узнать больше<span><img src="images/leasing/arrow_down.png"></span></div>
+			<div>Свернуть<span><img src="images/leasing/arrow_down.png"></span></div>
+		</div>
+		<div class="b-partners-leasing__mob">
+			<div id="owl-carousel-partner" class="b-partners-leasing__flex-container owl-carousel owl-theme">
+				<ul class="b-partners-leasing__list item">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+					<li>- Абсолют-Лизинг</li>
+					<li>- Авангард-Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+					<li>- Абсолют-Лизинг</li>
+					<li>- Авангард-Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- Brunswick Rail</li>
+					<li>- CARCADE Лизинг</li>
+					<li>- LeasePlan Russia</li>
+					<li>- Major Лизинг</li>
+				</ul>
+				<ul class="b-partners-leasing__list item">
+					<li>- VAB Лизинг</li>
+					<li>- VR LEASING (ФБ-ЛИЗИНГ)</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div class="b-how-leasing">
 		<h3>Как взять оборудование в лизинг</h3>
-		<div class="b-how-leasing__flex-container"></div>
 		<ul class="b-how-leasing__list">
 			<li>
 				<div class="b-how-leasing__nubmer">1</div>
@@ -234,13 +443,13 @@
 			</li>
 			<li>
 				<div class="b-how-leasing__nubmer">3</div>
-				<div class="b-how-leasing__text"><span>Сделать заявку</span><br>
+				<div class="b-how-leasing__text"><span>Сделать заявку</span><br/>
 				</div>
 			</li>
 			<li>
 				<div class="b-how-leasing__nubmer">4</div>
 				<div class="b-how-leasing__text"><span>Собрать минимальный пакет документов </span><br>
-					<div class="b-how-leasing__doc"><a class="b-how-leasing__show-doc">Перечень документов<span></a></div>
+					<div class="b-how-leasing__doc"><a class="b-how-leasing__show-doc"><span>Перечень документов</span></a></div>
 				</div>
 			</li>
 			<li>
@@ -276,7 +485,7 @@
 	<div class="b-advantages-leasing">
 		<h3>Преимущества лизинага оборудования</h3>
 		<div class="b-advantages-leasing__flex-container">
-			<div class=""><img src="images/leasing/advanteges-img.png"></div>
+			<div class="b-advantages-leasing__image"><img src="images/leasing/advanteges-img.png"></div>
 			<ul class="b-advantages-leasing__list">
 				<li><span>Оборотные средства</span> остаются на предприятии</li>
 				<li>Лизинговые платежи <span>относятся на себестоимость</span>, уменьшая налогооблагаемую базу по налогу на прибыль</li>
